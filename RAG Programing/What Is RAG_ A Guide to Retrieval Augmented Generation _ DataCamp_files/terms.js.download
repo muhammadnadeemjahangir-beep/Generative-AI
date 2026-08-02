@@ -1,0 +1,132 @@
+(()=>{function t(e){e=document.cookie.match("(^|;) ?"+e+"=([^;]*)(;|$)");return e?decodeURIComponent(e[2]):null}var e="1"===t("dc_imp_user");if(!e){var e=window.location.hostname.split(".").slice(-2).join("."),n="datacamp-staging.com"===e||("datacamp.test"===e||"localhost"===e||"127.0.0.1"===e),a=n?"datacamp-staging.com":"datacamp.com",e=window.location!==window.parent.location,i=!1;try{i=window.navigator.userAgent.includes("x-dc-client=webview")}catch{}var r,s,o=-1<window.location.search.indexOf("display_terms_banner");e||i?(e&&d(),i&&d()):(/^https:\/\/www\.(datacamp|datacamp-staging)\.com\/terms-of-use/.test(window.location.href)||/^https:\/\/events\.(datacamp|datacamp-staging)\.com/.test(window.location.href)?d:(r="dc_terms_banner",s=document,async()=>{if(o)d(),m("");else{var e=t(r);if(d(),null!==e){e=JSON.parse(e);if(d(),!0===e.d)return!d()}e=await(async()=>{var e="https://www."+a+"/api/users/signed_in.json";try{var t=await fetch(e,{credentials:"include"});if(t.ok)return await t.json();throw new Error("Legal Term Banner: Fetching current user "+t.status)}catch(e){console.warn(e.message)}})();d(),e&&(e=>{if(!e.website_terms_updated_at||new Date(e.website_terms_updated_at).getTime()>(new Date).getTime())d();else if(new Date(e.created_at).getTime()>=new Date(e.website_terms_updated_at).getTime())d();else if(e.first_sign_in_at_after_website_terms_update)if(!1===["CA","US"].includes(e.current_geo_country))d(e.current_geo_country);else{if(!(0!==(t=e.groups).length&&0<t.filter(e=>"enterprise"===e.type&&"cancelled"!==e.status).length)){var t=new Date(e.first_sign_in_at_after_website_terms_update),t=new Date(new Date(t).setDate(t.getDate()+7)).toISOString();if(!((new Date).getTime()>new Date(t).getTime())){t=new Date(new Date(e.website_terms_updated_at).setFullYear(new Date(e.website_terms_updated_at).getFullYear()+1)).toISOString();if(!((new Date).getTime()>=new Date(t).getTime()))return 1}}d()}else d()})(e)?m(e.website_terms_updated_at):d()}}))()}function d(){n&&-1<window.location.search.indexOf("terms_debug")&&console&&console.log}function c(){return window.location.hostname.split(".").slice(-2).join(".")}function l(e){window.dataLayer&&window.dataLayer.push&&(d(),window.dataLayer.push(e))}function p(e){var t;d(),d(),d(),o||(t=(t=r)+"="+('{"v":"1","wtua":"'+e+'","d":true'+"}")+";path=/;domain=."+c()+";expires="+new Date((new Date).setFullYear((new Date).getFullYear()+1)).toUTCString()+";","datacamp.test"!==c()&&(t+="secure;"),d(),s.cookie=t),s.querySelector(".dc-terms-banner-wrapper").classList.add("dc-is-hidden"),o||l({event:"heap_event",heap_event_name:"Terms Banner - Dismissed",heap_event_properties:{app_id:"terms-banner",event_category:"consent",website_terms_updated_at:e}})}function m(e){var t=`<div class="dc-terms-banner-wrapper">
+        <div class="dc-terms-banner">
+          <p class="dc-terms-banner-text">
+            This is a notice of updates to DataCamp's <a class="dc-terms-banner-link" target="_blank" href="https://www.${a}/terms-of-use?utm_campaign=legal-terms-2025-june&utm_medium=banner&utm_source=datacamp">Terms of Use</a>, which you should read to understand how the changes impact you. The changes include addition of binding arbitration terms concerning disputes with DataCamp. By using the Service, you agree to these changes.
+          </p>
+          <div class="dc-terms-banner-dismiss-wrapper">
+            <button class="dc-terms-banner-dismiss" aria-label="Dismiss terms banner">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M1.85744 1.85741C2.11146 1.6034 2.52335 1.6034 2.77737 1.85741L6.00295 5.083L9.22268 1.86425C9.47668 1.61025 9.88858 1.61028 10.1426 1.86425C10.3966 2.11827 10.3966 2.53015 10.1426 2.78417L6.92287 6.00292L10.1358 9.21581C10.3898 9.46983 10.3898 9.88172 10.1358 10.1357C9.88175 10.3897 9.46986 10.3897 9.21584 10.1357L6.00295 6.92284L2.7842 10.1426C2.53018 10.3966 2.1183 10.3966 1.86428 10.1426C1.61031 9.88855 1.61028 9.47665 1.86428 9.22265L5.08303 6.00292L1.85744 2.77733C1.60343 2.52332 1.60343 2.11143 1.85744 1.85741Z" fill="#05192D"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>`+`
+      <style>
+        .dc-terms-banner-wrapper {
+          border-top: 1px solid rgba(48, 57, 105, 0.15);
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
+          padding: 5px 52px;
+          position: -webkit-sticky;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          margin: 0;
+          right: 0;
+          z-index: 2147483647;
+          background: white !important;
+          width: 100%;
+        }
+        .dc-terms-banner-wrapper.dc-is-hidden {
+          display: none;
+          padding: 0;
+          visibility: hidden;
+        }
+        .dc-terms-banner {
+          border: 0;
+          background: white !important;
+          text-decoration: none;
+          text-align: center;
+          display: flex;
+          flex-direction: row;
+          font-size: 14px;
+          align-items: center;
+          padding: 16px 12px;
+          margin: 0;
+          max-width: 1080px;
+          height: 100%;
+          border-radius: 0;
+        }
+        .dc-terms-banner-text {
+          color: #05192D;
+          font-family: Studio-Feixen-Sans, Arial, sans-serif;
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0;
+          -webkit-font-smoothing: antialiased;
+        }
+        .dc-terms-banner-link,
+        .dc-terms-banner-link:visited {
+          border: 0;
+          color: #0065D1;
+          font-size: 14px;
+          font-weight: 800;
+          text-decoration: underline;
+          -webkit-font-smoothing: antialiased;
+        }
+        .dc-terms-banner-link:active,
+        .dc-terms-banner-link:focus,
+        .dc-terms-banner-link:hover {
+          border: 0;
+          color: #0065D1;
+          font-size: 14px;
+          text-decoration: underline;
+        }
+        .dc-terms-banner-dismiss-wrapper {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          flex-shrink: 0;
+          position: absolute;
+          right: 12px;
+          top: 18px;
+        }
+        .dc-terms-banner-dismiss {
+          -webkit-box-align: center;
+          align-items: center;
+          border-color: transparent;
+          border-radius: 4px;
+          border-style: solid;
+          border-width: 2px;
+          cursor: pointer;
+          display: inline-flex;
+          flex-direction: column;
+          font-family: Studio-Feixen-Sans, Arial, sans-serif;
+          font-weight: 800;
+          -webkit-box-pack: center;
+          justify-content: center;
+          line-height: 1;
+          margin: 0px 0px 0px auto;
+          outline: 0px;
+          padding: 0px;
+          position: relative;
+          text-decoration: none;
+          transition: background-color 125ms ease-out;
+          user-select: none;
+          vertical-align: middle;
+          z-index: 0;
+          background-color: transparent;
+          font-size: 12px;
+          height: 28px;
+          min-width: 28px;
+          width: auto;
+          color: #05192D;
+          flex-shrink: 0;
+        }
+        .dc-terms-banner-dismiss::before {
+          border-radius: 2px;
+          content: "";
+          display: block;
+          height: 100%;
+          inset: 0px;
+          position: absolute;
+          width: 100%;
+          z-index: 0;
+        }
+        .dc-terms-banner-dismiss:hover::before {
+          background-color: rgba(48, 57, 105, 0.06);
+        }
+      </style>`,n=s.getElementsByTagName("body"),i=s.createElement("div");d(),n[0].insertAdjacentElement("afterbegin",i),i.innerHTML=t,s.querySelector(".dc-terms-banner-dismiss").addEventListener("click",function(){p(e)}),o||l({event:"heap_event",heap_event_name:"Terms Banner - Shown",heap_event_properties:{app_id:"terms-banner",event_category:"consent",website_terms_updated_at:e}})}})();
