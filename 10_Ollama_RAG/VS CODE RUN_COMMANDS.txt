@@ -1,0 +1,33 @@
+STEP 1: Create project folder
+
+mkdir "D:\PGD Gen AI 2026\code\week2\langchain_groq_gradio_chains"
+cd "D:\PGD Gen AI 2026\code\week2\langchain_groq_gradio_chains"
+
+STEP 2: Open in VS Code
+
+code .
+
+STEP 3: Create uv environment
+
+uv venv
+
+STEP 4: Install requirements
+
+uv pip install -r requirements.txt
+
+STEP 5: Create .env
+
+copy .env.example .env
+notepad .env
+
+STEP 6: Run test examples
+
+uv run python main.py
+
+uv run python -m examples.chain_basics_groq
+
+uv run python -m examples.chain_conditional_groq
+
+STEP 7: Run Gradio app
+
+uv run python app.py
