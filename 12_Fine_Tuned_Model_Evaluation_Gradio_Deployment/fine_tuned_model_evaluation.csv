@@ -1,0 +1,72 @@
+question_id,question,base_model_answer,fine_tuned_model_answer,base_accuracy,base_relevance,base_clarity,base_completeness,base_hallucination_risk,base_teaching_style,fine_tuned_accuracy,fine_tuned_relevance,fine_tuned_clarity,fine_tuned_completeness,fine_tuned_hallucination_risk,fine_tuned_teaching_style,better_model,reason,base_total_score,fine_tuned_total_score,score_difference
+1,What is fine-tuning?,Fine-tuning is a technique used in machine learning to improve the performance of a model by adjusting its parameters based on specific tasks or datasets. Imagine you have a toy car that needs to learn how to drive safely on different roads. Fine-tuning would be like tweaking the car's wheels and brakes to make it better at navigating various paths and conditions. This process helps the model adapt to new situations more effectively.,"Fine-tuning is a technique used in machine learning to improve the performance of a pre-trained model by adjusting its parameters based on specific tasks or datasets. It involves training a new model (the fine-tuned model) with additional data from the task it was trained on, while keeping the original model unchanged. This process helps the fine-tuned model learn more effectively and generalize better across different domains.",3,4,3,3,2,3,4,5,5,4,1,5,Fine-tuned model,The fine-tuned answer is clearer and more aligned with classroom teaching style.,20,28,8
+2,What is LoRA?,"LoRA stands for Low-Rank Matrix Approximation. It's a type of machine learning algorithm used in computer vision tasks like image recognition. Imagine you have a bunch of tiny pieces (like building blocks) that represent different parts of an image. These blocks are called ""low-rank matrices."" The LoRA algorithm helps us find the best way to combine these small pieces into one big picture or label, making it easier for computers to understand images.",LoRA stands for Long Short-Term Memory. It's an architecture designed to improve the performance of recurrent neural networks (RNNs) by incorporating long-term dependencies into the model.,,,,,,,,,,,,,,,0,0,0
+3,What is QLoRA?,"QLoRA stands for ""Quantized Low-Rank Approximation."" It's a type of machine learning model used in computer vision tasks like image recognition. Imagine you have a bunch of tiny pieces (called ""quantization units"") that can represent different parts of an image or video. These quantization units help the model understand complex patterns without needing to store all those details at once.
+
+In simpler terms, it's a way to make big numbers smaller so they fit better into memory, which can speed up how quickly the model processes images or videos. This makes it more efficient and faster to analyze and process data!","QLoRA stands for ""Quantized Learning Rate"" Loopy Regularization Architecture. It's an optimization algorithm used in machine learning to improve the performance of deep neural networks by adjusting their weights more efficiently.",,,,,,,,,,,,,,,0,0,0
+4,Why is full fine-tuning expensive?,"Full fine-tuning can be expensive because it involves training the model on a very large dataset, which requires significant computational resources. This process typically takes a lot of time and money to complete. Additionally, fine-tuning models often requires more data than what was originally used during training, so there's an additional cost associated with acquiring new data.","Full fine-tuning involves training the model on a large dataset with additional labeled data to improve its performance. This process can be computationally intensive due to the need to retrain the entire model from scratch. The cost of this approach depends on several factors:
+
+1. **Data Size**: Larger datasets require more computational resources.
+2. **Training Time**: Fine-tuning takes longer than standard pre-training.
+3. **Model Complexity**: More complex models may require more time and memory.
+4. **Hardware Resources**: Higher-end hardware (e.g., GPUs) can speed up the process.
+
+The exact cost can vary depending on the specific model architecture, dataset size, and optimization techniques used during fine-tuning. For instance, some frameworks like PyTorch or TensorFlow have built-in mechanisms to optimize the model during fine-tuning, which can reduce overhead compared to manual retraining.",,,,,,,,,,,,,,,0,0,0
+5,What is the difference between LoRA and QLoRA?,"LoRA stands for Low-Rank Matrix Approximation, which is used in machine learning to approximate large matrices with smaller ones. It's like when you have a really big puzzle piece but can't fit it all into one spot - LoRA helps by breaking down the problem into smaller pieces.
+
+QLoRA is a slightly different approach called Quasi-Low-Rank Matrix Approximation. It's more focused on finding a good approximation of the matrix without needing to break it down as much. Think of it like trying to fit a small puzzle piece into a bigger picture instead of trying to fit everything into one spot.
+
+So, while both methods aim to solve similar problems, they're designed to be more efficient at doing so.","LoRA stands for Low-Rank Approximation, which is a technique used in deep learning to reduce the computational cost of matrix multiplication by approximating it with lower-rank matrices. QLoRA is an improved version of LoRA designed specifically for quantized neural networks (QNNs), where the model weights are represented using fixed-point arithmetic.
+
+The main differences between LoRA and QLoRA are:
+
+1. **Approximation Method**: LoRA uses low-rank approximation techniques like SVD or QR decomposition to approximate matrix operations. QLoRA further improves this by incorporating additional regularization terms to further reduce the rank of the approximation matrix.
+
+2. **Quantization**: Both methods aim to improve performance on hardware with limited precision but they approach the problem from different angles:
+   - LoRA focuses on reducing the number of floating-point operations.
+   - QLoRA aims to achieve better accuracy while maintaining",,,,,,,,,,,,,,,0,0,0
+6,What is the rank r in LoRA?,"In Long Range (LoRA) technology, ""r"" stands for range. It's a measure of how far a signal can travel before fading or becoming unusable. The higher the value of r, the farther the signal can travel without losing quality. A lower r indicates better coverage and less interference.","In Long Short-Term Memory (LSTM) networks, Rank R is typically used as the initial value of the cell state during training. It represents the average of all previous cell states.",,,,,,,,,,,,,,,0,0,0
+7,What is LoRA alpha?,"LoRA stands for Low-Rank Approximation. It's a technique used in machine learning to improve the performance of neural networks by reducing their complexity. In simpler terms, it helps make models smaller while still being able to learn from data effectively. This makes them faster and more efficient at processing information.","LoRA Alpha refers to the version of LoRA (Local Response Normalization) that includes an additional parameter called ""alpha"". This parameter controls how much weight LoRA assigns to the local response in the network. The default value of alpha is 0.1, but it can be adjusted based on specific requirements or performance goals.",,,,,,,,,,,,,,,0,0,0
+8,What is LoRA dropout?,"LoRA stands for Long Short-Term Recurrent Neural Networks. Dropout is a technique used in deep learning to prevent overfitting by randomly dropping out some neurons during training. In LoRA, the same neuron is dropped out multiple times, which helps to regularize the model's weights and prevents it from becoming too complex or ""overcomplicated."" This process encourages the network to learn more generalizable features rather than just memorizing specific patterns.",LoRA Dropout refers to the phenomenon where some of the parameters in a model are randomly dropped during training. This technique helps prevent overfitting by reducing the impact of these parameters on the loss function.,,,,,,,,,,,,,,,0,0,0
+9,What is PEFT?,"PEFT stands for Personal, Family, and Friends Education. It's a term used in the United States to describe the education of children who live with their parents or guardians. This includes things like school attendance, homework, extracurricular activities, and family involvement. The goal is to ensure that these children have access to quality education while also providing opportunities for them to be involved in their families' lives.","PEFT stands for ""Physical Education and Fitness Training."" It refers to the combination of physical education (PE) and fitness training programs designed to improve physical health and well-being.",,,,,,,,,,,,,,,0,0,0
+10,When should we use QLoRA?,"QLoRA is a type of deep learning model used in computer vision tasks like image recognition. It's typically used when you need to learn complex patterns or features from large amounts of data quickly.
+
+Here’s what you can expect:
+
+1. **Quick Learning**: QLoRA learns the most important parts of your data very quickly.
+2. **Efficient Use**: It doesn't require as much memory as other models, making it faster to train.
+3. **Versatile**: It works well with various types of images and videos.
+
+So, if you're working on tasks where you want to learn specific details from lots of data quickly, QLoRA might be the right choice. However, remember that it's not always the best option for every task because it requires more computational resources than some other models.","QLoRA is a type of lightweight residual learning architecture designed to improve the efficiency and performance of convolutional neural networks (CNNs). It's particularly useful when dealing with large datasets or when you need to reduce the computational complexity without sacrificing accuracy.
+
+Here’s how you might use QLoRA:
+
+1. **Pre-training**: When training your model on a large dataset, especially if it has many classes or features, using QLoRA can help in reducing the number of parameters needed by leveraging pre-trained models like ResNet-50 or Inception.
+   
+2. **Fine-tuning**: After fine-tuning your model on a smaller dataset, you may want to use QLoRA to further optimize the weights and improve the model's generalization ability.
+
+3. **Model compression**: For very small models, such as those used in mobile applications or IoT devices, QLoRA can be an",,,,,,,,,,,,,,,0,0,0
+11,What is quantization?,"Quantization is a process used in digital signal processing to reduce the number of bits needed to represent a continuous signal. This is done by dividing the range of values into smaller intervals or ""quantization levels."" The goal is to make the signal more manageable while preserving its essential characteristics. This can be useful when dealing with very small signals or when working with limited memory resources.","Quantization refers to the process of reducing the number of bits used in representing data or signals. This can be done by increasing the resolution of a signal, such as by using fewer bits per sample or by compressing the signal's amplitude. Quantization helps in making digital signals more manageable and easier to analyze, especially when dealing with large datasets or high-frequency signals.",,,,,,,,,,,,,,,0,0,0
+12,What is the difference between prompting and fine-tuning?,"Prompting and fine-tuning are two different techniques used in machine learning to improve models.
+
+Prompting:
+- This involves providing specific instructions or inputs to the model.
+- It's often done when the model needs more context or data points to make an accurate prediction.
+- The goal is usually to provide additional information that helps the model learn better from its own experiences.
+
+Fine-tuning:
+- This is about adjusting the parameters of a pre-trained model (like a neural network) to get it to perform better on a new task.
+- Fine-tuning can be done using various methods such as transfer learning, where the model is trained on a large dataset but then fine-tuned on a smaller dataset with limited resources.
+- The idea is to use the existing knowledge and experience of the model to adapt to new tasks without needing extensive retraining.
+
+In summary, prompting focuses on adding new input data, while","Prompting and fine-tuning are two different techniques used in machine learning to improve model performance.
+
+**Prompting:**
+- **Definition:** Prompting involves providing specific input data or instructions to an existing model.
+- **Purpose:** It allows users to provide more detailed information about their task or problem, which can help the model learn better by adjusting its parameters accordingly.
+- **Example:** When training a language model like BERT, users might prompt it with sentences describing the context of a particular question or response.
+
+**Fine-Tuning:**
+- **Definition:** Fine-tuning involves using pre-trained models (like BERT) on new tasks or datasets to adapt them to specific needs.
+- **Purpose:** This technique aims to make the model perform well on unseen data by leveraging the knowledge and architecture learned from the original model.
+- **Example:** In natural language processing, fine-tuning a pre-trained",,,,,,,,,,,,,,,0,0,0
