@@ -1,9 +1,9 @@
-mcp>=2,<3
-gradio>=6,<7
+mcp
+groq
+streamlit
 pandas
 pydantic
 pypdf
-groq
-openpyxl
 mcp
 groq
+openpyxl
