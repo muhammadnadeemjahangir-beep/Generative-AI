@@ -5,3 +5,5 @@ pydantic
 pypdf
 groq
 openpyxl
+mcp
+groq
